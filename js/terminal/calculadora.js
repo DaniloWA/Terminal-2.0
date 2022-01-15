@@ -34,7 +34,6 @@ export function calculos (n1, n2, operador) {
     switch (operador) {
          case 1:
               resultado = num1 + num2
-              console.log(num1,num2, ", TESTE NUMEROS ")
               return resultado
               break;
          case 2:
@@ -61,6 +60,7 @@ export function respostaCalculos(){
         let num1 = dadosCalculadorRG.exec(dados)[1]
         let num2 = dadosCalculadorRG.exec(dados)[3]
         let operadores = dadosCalculadorRG.exec(dados)[2]
+        console.log(dadosCalculadorRG.exec(dados)[2])
         let respostaF = calculos(num1,num2,operadoresIA(operadores))
     return respostaF
    }
@@ -69,6 +69,6 @@ export function respostaCalculos(){
  
 
 export function calculadoraRG(){
-    let regExp = /(\d+) (mais|menos|dividido|por|vezes) (\d+)/i
+    let regExp = /(\d+) (mais|\+|\-|\*|\/|menos|dividido|por|vezes) (\d+)/i
     return regExp
   }
