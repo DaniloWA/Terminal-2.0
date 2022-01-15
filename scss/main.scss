@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline:none;
+}
+
+body{
+    font-family:Consolas;
+    background-color: #401386;
+}
+.title{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+    h1{ 
+        margin-top: 20px;
+        border: 3px solid green;
+        font-weight: bold;
+        color: green;
+        padding: 10px;
+    }
+}
+
+.container {
+    display: grid;
+    box-sizing: border-box;
+    margin-top: 20px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr ;
+    grid-template-areas: ' . terminal . ' ;
+    .terminal{
+        box-sizing: border-box;
+        grid-area: terminal;
+        display: grid;
+        border-radius: 10px;
+        box-shadow: 10px 10px 25px rgb(0, 0, 0);
+        background-color:#140330;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-areas: 
+            ' txt txt txt txt txt txt'
+            ' display display display display display display'
+        ;
+        #txt{
+            box-sizing: border-box;
+            margin:15px;
+            grid-area: txt;
+            background-color: #161515;
+            border: none;
+            border-radius: 10px;
+            padding: 5px;
+            padding-left: 15px;
+            color: rgba(255, 255, 255, 0.508);
+            font-size: 20px;
+        }
+        .display{
+            box-sizing: border-box;
+            grid-area: display;
+            min-width: 600px;
+            min-height: 70vh;
+            background-color: #161515;
+            margin:15px;
+            margin-top: 0;
+            border-radius: 10px;
+            padding: 15px;
+            color: green;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+    }
+}
+footer{
+    position:absolute;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    bottom: 15px;
+    left:30%;
+    right:30%;
+    text-align: center;
+}
