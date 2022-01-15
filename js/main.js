@@ -7,6 +7,7 @@ import * as GerarEmail from "../js/terminal/gerarEmail.js"
 import * as GerarNumero from "../js/terminal/gerarNumeroPortugues.js"
 import * as GerarSenha from "../js/terminal/gerarSenha.js"
 import * as InverterTexto from "../js/terminal/inverterTexto.js"
+import * as Help from "../js/terminal/help.js"
 
 const getDados = document.querySelector('#txt')
 const div = document.querySelector(".display")
@@ -53,6 +54,10 @@ export function adcElemento(exec,txt){
 
 function verificador(){
     let dados = getDadosEntrada()
+
+    if(Help.regexHelp().exec(dados)){
+        adcElemento(Help.regexHelp().exec(dados), Help.help())
+    }
 
     if(Calculadora.calculadoraRG().exec(dados)){
         adcElemento(Calculadora.calculadoraRG().exec(dados), Calculadora.respostaCalculos())

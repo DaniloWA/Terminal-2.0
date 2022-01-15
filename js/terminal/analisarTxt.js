@@ -25,3 +25,26 @@ export function contaCaracteres() {
 }
 
 
+/*
+ console.log("Gerando Senha")
+      let vezes = regexGerarSenha().exec(dados)[1]
+      let comSem = regexGerarSenha().exec(dados)[2]
+
+      if(comSem == "com" && vezes){
+        for(let i = 0; i < vezes; i++){
+          password += Numeros[random(9,0)] + LetrasMaisculas[random(24,0)] + LetrasMinusculas[random(25,0)] + CaracteresEspeciais[random(18,0)]
+        }
+        return password
+      }
+
+      if(comSem == "sem" && vezes){
+        for(let i = 0; i < vezes; i++){
+          password += Numeros[random(9,0)] + LetrasMaisculas[random(25,0)] + LetrasMinusculas[random(26,0)]
+        }
+        return password
+      }
+
+      if(comSem == undefined || vezes == undefined){
+        return  "Experimente assim : gerar senha (n) (com ou sem) caracteres especiais"
+      }
+*/
