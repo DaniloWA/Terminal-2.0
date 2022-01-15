@@ -28,7 +28,11 @@ body{
     margin-top: 20px;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr ;
-    grid-template-areas: ' . terminal . ' ;
+    grid-template-areas: 
+    ' . terminal . '
+    'footer footer footer'
+    
+    ;
     .terminal{
         box-sizing: border-box;
         grid-area: terminal;
@@ -57,7 +61,7 @@ body{
             box-sizing: border-box;
             grid-area: display;
             min-width: 600px;
-            min-height: 70vh;
+            min-height: 73vh;
             background-color: #161515;
             margin:15px;
             margin-top: 0;
@@ -68,15 +72,20 @@ body{
             letter-spacing: 2px;
         }
     }
-}
-footer{
-    position:absolute;
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    letter-spacing: 5px;
-    bottom: 15px;
-    left:30%;
-    right:30%;
-    text-align: center;
+    footer{
+        grid-area: footer;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 5px;
+        bottom: 0px;
+        left:30%;
+        right:30%;
+        left: 0;
+        bottom: 15px;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
 }
