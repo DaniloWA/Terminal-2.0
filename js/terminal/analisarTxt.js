@@ -1,6 +1,7 @@
 import { getDadosEntrada } from "../main.js"
 
 export function analisarTexto(){
+    console.log("ANALISAR TEXTO")
     let dados = getDadosEntrada()
     let numPalavras = dados.match(contaPalavras()).length -1 // o -1 elimina o Analisar texto da equação
     let numCaracteres = dados.match(contaCaracteres()).length -13 // o -1 elimina o Analisar texto da equação

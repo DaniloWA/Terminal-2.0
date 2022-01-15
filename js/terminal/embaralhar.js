@@ -1,4 +1,4 @@
-import { getDadosEntrada , getHora } from "../main.js"
+import { getDadosEntrada} from "../main.js"
 
 export function embaralharTexto(){
     let dados = getDadosEntrada()
